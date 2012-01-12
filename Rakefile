@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Nonsmokingbars::Application.load_tasks
+NonSmokingBars::Application.load_tasks

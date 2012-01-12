@@ -1,4 +1,4 @@
-Nonsmokingbars::Application.routes.draw do
+NonSmokingBars::Application.routes.draw do
   resources :non_smoking_bars
 
   # The priority is based upon order of creation:
