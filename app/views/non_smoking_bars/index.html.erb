@@ -1,13 +1,12 @@
-<h1>Listing non_smoking_bars</h1>
+<h1>Non-smoking bars in Zagreb</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Address</th>
-    <th>City</th>
     <th>Neighbourhood</th>
-    <th>Partly</th>
-    <th></th>
+    <!-- <th>City</th> -->
+    <!-- <th>Partly</th> -->
     <th></th>
     <th></th>
   </tr>
@@ -16,10 +15,9 @@
   <tr>
     <td><%= non_smoking_bar.name %></td>
     <td><%= non_smoking_bar.address %></td>
-    <td><%= non_smoking_bar.city %></td>
     <td><%= non_smoking_bar.neighbourhood %></td>
-    <td><%= non_smoking_bar.partly %></td>
-    <td><%= link_to 'Show', non_smoking_bar %></td>
+    <!-- <td><%= non_smoking_bar.city %></td> -->
+    <!-- <td><%= non_smoking_bar.partly %></td> -->
     <td><%= link_to 'Edit', edit_non_smoking_bar_path(non_smoking_bar) %></td>
     <td><%= link_to 'Destroy', non_smoking_bar, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -28,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Non smoking bar', new_non_smoking_bar_path %>
+<%= link_to 'Add a new bar', new_non_smoking_bar_path %>

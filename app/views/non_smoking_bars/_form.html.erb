@@ -21,17 +21,17 @@
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= f.text_field :city, :readonly => true %>
   </div>
   <div class="field">
     <%= f.label :neighbourhood %><br />
     <%= f.text_field :neighbourhood %>
   </div>
   <div class="field">
-    <%= f.label :partly %><br />
+    <%= f.label 'has a decent non-smoking area (not entirely smoke-free)' %><br />
     <%= f.check_box :partly %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit params[:action] == 'edit' ? 'Update' : 'Save' %>
   </div>
 <% end %>
