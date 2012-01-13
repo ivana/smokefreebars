@@ -44,7 +44,7 @@ class NonSmokingBarsController < ApplicationController
 
     respond_to do |format|
       if @non_smoking_bar.save
-        format.html { redirect_to @non_smoking_bar, notice: 'Non smoking bar was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Successfully created.' }
         format.json { render json: @non_smoking_bar, status: :created, location: @non_smoking_bar }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class NonSmokingBarsController < ApplicationController
 
     respond_to do |format|
       if @non_smoking_bar.update_attributes(params[:non_smoking_bar])
-        format.html { redirect_to @non_smoking_bar, notice: 'Non smoking bar was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -76,7 +76,7 @@ class NonSmokingBarsController < ApplicationController
     @non_smoking_bar.destroy
 
     respond_to do |format|
-      format.html { redirect_to non_smoking_bars_url }
+      format.html { redirect_to root_url, notice: 'Successfully deleted.' }
       format.json { head :ok }
     end
   end
