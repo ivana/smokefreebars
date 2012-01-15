@@ -6,7 +6,7 @@ class CreateNonSmokingBars < ActiveRecord::Migration
       t.string :city,     :default => 'Zagreb'
       t.string :neighbourhood
 
-      # by default, a bar is entirely non-smoking; this attribute indicates it has a non-smoking area when true
+      # by default, a bar is entirely smoke-free; this attribute indicates it has a smoke-free area when true
       t.boolean :partly,  :default => false
 
       t.timestamps
