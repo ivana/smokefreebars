@@ -1,19 +1,17 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background:snow; color:#222;
+  margin:0 auto; width:500px; padding:0; border:1px solid #ddd;
+/*  font:62.5% "Theano Didot", didot, "times new roman", times, georgia, serif;*/
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+h1 { margin:1em 0 1.5em;
+  span { font:60px/1.5 "Pinyon Script", cursive; }
+}
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px; }
+th { text-align: left; }
+td { padding:.5em 2em .5em 0; }
 
 a {
   color: #000;
@@ -55,6 +53,3 @@ div {
     font-size: 12px;
     list-style: square; } }
 
-h1 { margin:1em 0 1.5em; }
-th { text-align: left; }
-td { padding:.5em 2em .5em 0; }
