@@ -14,14 +14,16 @@
   <h1><span class="cursive">Smoke-free</span> <span>bars in Zagreb</span></h1>
 
   <nav>
-    <%= link_to 'Home', root_path %> |
+    <ol>
+      <li><%= link_to 'Home', root_path %></li>
 
-    <% if logged_in? %>
-      Logged in as <%= link_to current_user.username, edit_current_user_path %>,
-      <%= link_to "log out", logout_path %>
-    <% else %>
-      <%= link_to "Login", login_path %>
-    <% end %>
+      <% if logged_in? %>
+        <li><%= link_to "Edit profile", edit_current_user_path %></li>
+        <li><%= link_to "Log out", logout_path %></li>
+      <% else %>
+        <li><%= link_to "Login", login_path %></li>
+      <% end %>
+    </ol>
   </nav>
 
   <%= yield %>

@@ -4,9 +4,11 @@ body {
   background:snow; color:#222;
   margin:0 auto; padding:0 10px 0 (2 * $left-indent); border-right:1px solid #ddd; width:400px;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
+
+  > h1 { margin:0 0 30px; float:left; }
 }
 
-h1 { margin:0 0 30px;
+h1 {
   span { display:block; }
   .cursive { font:60px/1.5 "Pinyon Script", cursive; margin-left: -$left-indent;
     + span {
@@ -17,6 +19,16 @@ h1 { margin:0 0 30px;
     } 
   }
 }
+
+nav {
+  ol {
+    list-style:none; margin:0;
+    padding:35px 0 0; text-align:right;
+    font-size: 11px; text-transform: lowercase;
+  }
+}
+
+section { clear:left;}
 
 th { text-align: left; }
 td { padding:.5em 2em .5em 0; }
