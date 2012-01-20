@@ -1,23 +1,22 @@
-$left-indent:29px;
+$text-color:#222;
+$background-color:snow;
 
+ol, ul { list-style:none; margin:0; padding:0; }
+
+$smoke-free-width:260px;
 body {
-  background:snow; color:#222;
-  margin:0 auto; padding:0 10px 0 (2 * $left-indent); border-right:1px solid #ddd; width:400px;
+  background:$background-color; color:$text-color;
+  margin:0 auto; padding:0 10px; border-right:1px solid #555; width:500px;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
 
-  > h1 { margin:0 0 30px; float:left; }
-}
-
-h1 {
-  span { display:block; }
-  .cursive { font:60px/1.5 "Pinyon Script", cursive; margin-left: -$left-indent;
-    + span {
-      text-transform:uppercase;
-      font-weight:normal; font-size:11px;
-      letter-spacing:1.5px;
-      position: relative; bottom:20px;
-    } 
-  }
+  > h1 { margin:0 0 50px;
+    span { display:block; }
+    .cursive { font:60px/1.5 "Pinyon Script", cursive; float:left; width: $smoke-free-width;
+      + span { padding-top: 36px; }
+      ~ span {
+        margin-left:$smoke-free-width;
+        text-transform: uppercase; font-weight: normal; font-size: 11px; line-height: 13px; letter-spacing: 1px;
+      } } }
 }
 
 nav {
