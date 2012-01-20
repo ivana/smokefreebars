@@ -47,15 +47,17 @@ footer {
 th { text-align: left; }
 td { padding:.5em 2em .5em 0; }
 
+#notice {
+  color:steelblue;
+  position: absolute; top: 123px; left: 20px;
+}
+
 
 /* scaffold css */
 
 div {
   &.field, &.actions {
     margin-bottom: 10px; } }
-
-#notice {
-  color: green; }
 
 .field_with_errors {
   padding: 2px;
