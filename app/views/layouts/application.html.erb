@@ -15,8 +15,7 @@
 
   <nav>
     <ol>
-      <li><%= link_to 'Home', root_path %></li>
-
+      <!-- <li><%= link_to 'Home', root_path %></li> -->
       <% if logged_in? %>
         <li><%= link_to "Edit profile", edit_current_user_path %></li>
         <li><%= link_to "Log out", logout_path %></li>
