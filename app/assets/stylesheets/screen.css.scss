@@ -15,10 +15,11 @@ a { text-decoration:none;
 $smoke-free-width:260px;
 body {
   background:$background-color; color:$text-color;
-  margin:0 auto; padding:0 10px; border-right:1px solid $border-color; width:500px;
+  border-right:1px solid $border-color;
+  width:500px; margin:0 auto; padding:0;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
 
-  > h1 { margin:0 0 50px;
+  > h1 { margin:0 0 70px;
     span { display:block; }
     .cursive { font:60px/1.5 "Pinyon Script", cursive; float:left; width: $smoke-free-width;
       + span { padding-top: 36px; }
@@ -30,7 +31,7 @@ body {
 
 nav {
   font-size: 11px;
-  position: absolute; left: 20px; top: 20px;
+  position: absolute; left: 20px; top: 13px;
 
   ol { list-style-type:square; }
 }
@@ -45,6 +46,9 @@ footer {
 
 th { text-align: left; }
 td { padding:.5em 2em .5em 0; }
+
+
+/* scaffold css */
 
 div {
   &.field, &.actions {
