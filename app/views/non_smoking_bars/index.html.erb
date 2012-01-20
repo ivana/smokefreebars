@@ -26,12 +26,13 @@
 <% end %>
 </table>
 
+<p>
 <% if logged_in? %>
   <%= link_to 'Add a smoke-free bar', new_non_smoking_bar_path %>
 <% else %>
-  <p>Know a place not listed here? Send an email to
-    <a href="mailto:dev@ivana.im?subject=Smoke-free bars">dev@ivana.im</a> to let me know!
-  </p>
+  Know a place not listed here? Send an email to
+  <a href="mailto:dev@ivana.im?subject=Smoke-free bars">dev@ivana.im</a> to let me know!
 <% end %>
+</p>
 
 <p id="notice"><%= notice %></p>
