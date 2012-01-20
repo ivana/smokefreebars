@@ -36,7 +36,7 @@ nav {
   ol { list-style-type:square; }
 }
 
-section { clear:left;}
+section { clear:left; width: 200px; margin: 0 auto; }
 
 footer {
   background:$text-color; color: #909090;
