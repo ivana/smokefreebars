@@ -20,11 +20,10 @@ body {
 }
 
 nav {
-  ol {
-    list-style:none; margin:0;
-    padding:35px 0 0; text-align:right;
-    font-size: 11px; text-transform: lowercase;
-  }
+  font-size: 11px;
+  position: absolute; left: 20px; top: 20px;
+
+  ol { list-style-type:square; }
 }
 
 section { clear:left;}
