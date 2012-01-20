@@ -1,12 +1,21 @@
-$text-color:#222;
+$text-color:#444;
 $background-color:snow;
+$border-color:#888;
+
+$link-color:darken(#8FBC8F, 10%); /* darkSeaGreen */
+$hover-color:darken(#3CB371, 10%); /* mediumSeaGreen */
 
 ol, ul { list-style:none; margin:0; padding:0; }
+
+a { text-decoration:none;
+  &:link, &:visited { color:$link-color; }
+  &:hover { color:$hover-color; }
+}
 
 $smoke-free-width:260px;
 body {
   background:$background-color; color:$text-color;
-  margin:0 auto; padding:0 10px; border-right:1px solid #555; width:500px;
+  margin:0 auto; padding:0 10px; border-right:1px solid $border-color; width:500px;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
 
   > h1 { margin:0 0 50px;
@@ -30,14 +39,6 @@ section { clear:left;}
 
 th { text-align: left; }
 td { padding:.5em 2em .5em 0; }
-
-a {
-  color: #000;
-  &:visited {
-    color: #666; }
-  &:hover {
-    color: #fff;
-    background-color: #000; } }
 
 div {
   &.field, &.actions {
