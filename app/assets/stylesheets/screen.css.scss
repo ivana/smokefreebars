@@ -71,6 +71,34 @@ table + p { margin-top:40px; }
 
 }
 
+#bars {
+  font-size: 11px;
+  li { margin-bottom: 1.2em }
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.2;
+    display: inline-block;
+    margin-right: 4px;
+    color: #222;
+    letter-spacing: .07em;
+   }
+  .address {
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 400;
+    letter-spacing: .1em;
+    color: lighten(#369, 20%);
+  }
+  .neighbourhood {
+    color: lighten($text-color, 50%);
+    &:before { content: "(" }
+    &:after { content: ")" }
+  }
+  margin-bottom: 2em;
+}
+
 /* scaffold css */
 
 div {

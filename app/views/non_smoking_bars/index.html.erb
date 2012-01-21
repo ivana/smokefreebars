@@ -1,33 +1,18 @@
-<table>
-  <thead><tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Neighbourhood</th>
-    <!-- <th>City</th> -->
-    <!-- <th>Partly</th> -->
-
+<ul id="bars">
+<% @non_smoking_bars.each do |bar| %>
+  <li>
+    <h2><%= bar.name %></h2>
+    <span class="address"><%= bar.address %></span>
+    <span class="neighbourhood"><%= bar.neighbourhood %></span>
     <% if logged_in? %>
-      <th><!-- Actions --></th>
+      <ol>
+        <li><%= link_to 'Edit', edit_non_smoking_bar_path(bar) %></li>
+        <li><%= link_to 'Delete', bar, confirm: 'Are you sure?', method: :delete %></li>
+      </ol>
     <% end %>
-  </tr></thead>
-
-<% @non_smoking_bars.each do |non_smoking_bar| %>
-  <tr>
-    <td><%= non_smoking_bar.name %></td>
-    <td><%= non_smoking_bar.address %></td>
-    <td><%= non_smoking_bar.neighbourhood %></td>
-    <!-- <td><%= non_smoking_bar.city %></td> -->
-    <!-- <td><%= non_smoking_bar.partly %></td> -->
-
-    <% if logged_in? %>
-      <td>
-        <%= link_to 'edit', edit_non_smoking_bar_path(non_smoking_bar) %> -
-        <%= link_to 'delete', non_smoking_bar, confirm: 'Are you sure?', method: :delete %>
-      </td>
-    <% end %>
-  </tr>
+  </li>
 <% end %>
-</table>
+</ul>
 
 <p>
 <% if logged_in? %>
