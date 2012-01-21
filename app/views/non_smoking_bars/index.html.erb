@@ -1,15 +1,15 @@
 <table>
-  <tr>
+  <thead><tr>
     <th>Name</th>
     <th>Address</th>
     <th>Neighbourhood</th>
     <!-- <th>City</th> -->
     <!-- <th>Partly</th> -->
+
     <% if logged_in? %>
-    <th></th>
-    <th></th>
+      <th><!-- Actions --></th>
     <% end %>
-  </tr>
+  </tr></thead>
 
 <% @non_smoking_bars.each do |non_smoking_bar| %>
   <tr>
@@ -18,9 +18,12 @@
     <td><%= non_smoking_bar.neighbourhood %></td>
     <!-- <td><%= non_smoking_bar.city %></td> -->
     <!-- <td><%= non_smoking_bar.partly %></td> -->
+
     <% if logged_in? %>
-    <td><%= link_to 'Edit', edit_non_smoking_bar_path(non_smoking_bar) %></td>
-    <td><%= link_to 'Delete', non_smoking_bar, confirm: 'Are you sure?', method: :delete %></td>
+      <td>
+        <%= link_to 'edit', edit_non_smoking_bar_path(non_smoking_bar) %> -
+        <%= link_to 'delete', non_smoking_bar, confirm: 'Are you sure?', method: :delete %>
+      </td>
     <% end %>
   </tr>
 <% end %>

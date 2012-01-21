@@ -15,7 +15,6 @@ a { text-decoration:none;
 $smoke-free-width:260px;
 body {
   background:$background-color; color:$text-color;
-  border-right:1px solid $border-color;
   width:500px; margin:0 auto; padding:0;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
 
@@ -42,11 +41,16 @@ footer {
   background:$text-color; color: #909090;
   font-size: 11px; text-shadow: 1px 1px 1px #222; text-align:center;
   padding: 25px 10px 20px; margin-top:100px;
+  border-radius:2px;
 }
 
+table, tr { border:1px solid #eee; }
+table { border-collapse:collapse; width:100%; }
+th, td { text-align: left; }
+th { padding: 10px 0 10px 10px; background:#eee; }
+td { padding:5px 0 5px 10px; }
+
 table + p { margin-top:40px; }
-th { text-align: left; }
-td { padding:.5em 2em .5em 0; }
 
 #notice {
   color:steelblue;
