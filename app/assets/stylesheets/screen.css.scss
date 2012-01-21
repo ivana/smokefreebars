@@ -5,7 +5,7 @@ $border-color:#888;
 $link-color:darken(#8FBC8F, 10%); /* darkSeaGreen */
 $hover-color:darken(#3CB371, 10%); /* mediumSeaGreen */
 
-ol, ul { list-style:none; margin:0; padding:0; }
+ol, ul { list-style-type:none; margin:0; padding:0; }
 
 a { text-decoration:none;
   &:link, &:visited { color:$link-color; }
@@ -64,28 +64,15 @@ div {
   &.field, &.actions {
     margin-bottom: 10px; } }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
+.field_with_errors { background-color: red; display: table; }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  border: 1px solid red; background-color: #f0f0f0;
+  padding: 7px; padding-bottom: 0; margin-bottom: 20px;
+
   h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff; }
-  ul li {
-    font-size: 12px;
-    list-style: square; } }
+    text-align: left; font-size:12px;
+    padding:7px; margin: -7px; margin-bottom: 0px;
+    background-color: #c00; color: #fff; }
+}
 
