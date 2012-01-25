@@ -23,6 +23,16 @@ class User < ActiveRecord::Base
     BCrypt::Engine.hash_secret(pass, password_salt)
   end
 
+  # remember me
+  before_create { generate_token(:auth_token) }
+
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
+
+
   private
 
   def prepare_password
@@ -31,4 +41,5 @@ class User < ActiveRecord::Base
       self.password_hash = encrypt_password(password)
     end
   end
+
 end

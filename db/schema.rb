@@ -11,25 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120115153216) do
+ActiveRecord::Schema.define(:version => 20120124211832) do
 
   create_table "non_smoking_bars", :force => true do |t|
-    t.string   "name",                                :null => false
-    t.string   "address",                             :null => false
-    t.string   "city",          :default => "Zagreb"
-    t.string   "neighbourhood"
-    t.boolean  "partly",        :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name",                                :null => false
+    t.string    "address",                             :null => false
+    t.string    "city",          :default => "Zagreb"
+    t.string    "neighbourhood"
+    t.boolean   "partly",        :default => false
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "username"
+    t.string    "email"
+    t.string    "password_hash"
+    t.string    "password_salt"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "auth_token"
   end
 
 end
