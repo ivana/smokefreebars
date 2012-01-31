@@ -58,6 +58,18 @@ table + p { margin-top:40px; }
   position: absolute; top: 123px; left: 20px;
 }
 
+@media only screen and (max-device-width:480px) {
+
+  nav { text-align:right; right:20px; top:10px; line-height:1.4;
+    ol { list-style:none; }
+  }
+  body > h1 .cursive {
+    + span { padding-top:10px; }
+    ~ span { font-size:22px; line-height:26px;}
+  }
+  #notice { top:80px; }
+
+}
 
 /* scaffold css */
 
