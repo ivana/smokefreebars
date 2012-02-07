@@ -1,4 +1,4 @@
-$text-color:#444;
+$text-color:#555;
 $background-color:snow;
 $border-color:#888;
 
@@ -15,10 +15,10 @@ a { text-decoration:none;
 $smoke-free-width:260px;
 body {
   background:$background-color; color:$text-color;
-  width:600px; margin:0 auto; padding:0;
+  width:500px; margin:0 auto; padding:0;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
 
-  > h1 { margin:0 0 70px;
+  > h1 { margin:0 0 50px;
     span { display:block; }
     .cursive { font:60px/1.5 "Pinyon Script", cursive; float:left; width: $smoke-free-width;
       + span { padding-top: 36px; }
@@ -37,21 +37,27 @@ nav {
 
 section { clear:left; width: 200px; margin: 0 auto; }
 
+#bars { background:#F9F7F7; padding:24px 30px 15px; border-radius:4px;
+
+  li { margin-bottom:10px }
+  .name {
+    margin:0 4px 0 0; display: inline-block;
+    font-size: 15px; font-weight: 200; line-height: 1.2; letter-spacing: 1px;
+  }
+  .address {
+    color: lighten(#369, 20%);
+    text-transform: uppercase; font-size: 11px;
+  }
+
+  + p { margin-top:40px; }
+}
+
 footer {
   background:$text-color; color: #909090;
   font-size: 11px; text-shadow: 1px 1px 1px #222; text-align:center;
   padding: 25px 10px 20px; margin-top:100px;
   border-radius:2px;
 }
-
-table, tr { border:1px solid #eee; }
-table { border-collapse:collapse; width:100%; }
-th, td { text-align: left; }
-th { padding: 10px 0 10px 10px; background:#eee; }
-td { padding:5px 0 5px 10px; }
-td:first-child { width:33%; }
-
-table + p { margin-top:40px; }
 
 #notice {
   color:steelblue;
@@ -69,34 +75,6 @@ table + p { margin-top:40px; }
   }
   #notice { top:80px; }
 
-}
-
-#bars {
-  font-size: 11px;
-  li { margin-bottom: 1.2em }
-  h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 100;
-    line-height: 1.2;
-    display: inline-block;
-    margin-right: 4px;
-    color: #222;
-    letter-spacing: .07em;
-   }
-  .address {
-    text-transform: uppercase;
-    font-size: 90%;
-    font-weight: 400;
-    letter-spacing: .1em;
-    color: lighten(#369, 20%);
-  }
-  .neighbourhood {
-    color: lighten($text-color, 50%);
-    &:before { content: "(" }
-    &:after { content: ")" }
-  }
-  margin-bottom: 2em;
 }
 
 /* scaffold css */
