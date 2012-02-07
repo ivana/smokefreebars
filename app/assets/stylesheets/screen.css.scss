@@ -12,20 +12,19 @@ a { text-decoration:none;
   &:hover { color:$hover-color; }
 }
 
-$smoke-free-width:260px;
 body {
   background:$background-color; color:$text-color;
-  width:500px; margin:0 auto; padding:0;
+  width:460px; margin:0 auto; padding:0;
   font:12px/1.5 "Helvetica Neue", helvetica, sans-serif;
 
   > h1 { margin:0 0 50px;
-    span { display:block; }
-    .cursive { font:60px/1.5 "Pinyon Script", cursive; float:left; width: $smoke-free-width;
-      + span { padding-top: 36px; }
-      ~ span {
-        margin-left:$smoke-free-width;
-        text-transform: uppercase; font-weight: normal; font-size: 11px; line-height: 13px; letter-spacing: 1px;
-      } } }
+    .cursive { font:60px/1.5 "Pinyon Script", cursive; float:left; width:265px;
+      + span {
+        font-weight: 100; font-size:28px;
+        position: relative; top: 28px;
+        letter-spacing:2px;
+        display: inline-block; margin-bottom: 20px;
+  } } }
 }
 
 nav {
