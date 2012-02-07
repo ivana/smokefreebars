@@ -23,6 +23,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'nibbler'
+gem 'choices'
 
 gem "nifty-generators", :group => :development
 

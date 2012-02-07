@@ -1,0 +1,13 @@
+defaults: &defaults
+  fsq:
+    client_id: <%= ENV['FSQ_KEY'] %>
+    client_secret: <%= ENV['FSQ_SECRET'] %>
+
+development:
+  <<: *defaults
+
+test: &testing
+  <<: *defaults
+
+production:
+  <<: *defaults

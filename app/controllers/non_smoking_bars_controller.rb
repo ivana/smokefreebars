@@ -5,7 +5,7 @@ class NonSmokingBarsController < ApplicationController
   # GET /non_smoking_bars
   # GET /non_smoking_bars.json
   def index
-    @non_smoking_bars = NonSmokingBar.all
+    @non_smoking_bars = FsqBar.all
 
     respond_to do |format|
       format.html # index.html.erb

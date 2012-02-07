@@ -11,9 +11,12 @@ end
 
 module NonSmokingBars
   class Application < Rails::Application
-    config.autoload_paths << "#{config.root}/lib"    # Settings in config/environments/* take precedence over those specified here.
+    config.autoload_paths << "#{config.root}/lib"    
+    # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    config.from_file 'settings.yml'
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)

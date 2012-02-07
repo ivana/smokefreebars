@@ -1,3 +1,4 @@
+settings.local.yml
 .bundle
 db/*.sqlite3
 log/*.log
