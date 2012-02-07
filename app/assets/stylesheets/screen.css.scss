@@ -64,16 +64,14 @@ footer {
 }
 
 @media only screen and (max-device-width:480px) {
-
-  nav { text-align:right; right:20px; top:10px; line-height:1.4;
-    ol { list-style:none; }
+  nav { display:none }
+  body > h1 .cursive + span { padding-top:6px; font-size:26px; line-height:1.2; letter-spacing:1px; }
+  #bars {
+    .name { font-size:20px; }
+    .address { font-size:9px; }
+    + p { padding-left:30px; margin-top:20px; }
   }
-  body > h1 .cursive {
-    + span { padding-top:10px; }
-    ~ span { font-size:22px; line-height:26px;}
-  }
-  #notice { top:80px; }
-
+  footer { font-size:10px; margin-top:40px; }
 }
 
 /* scaffold css */
