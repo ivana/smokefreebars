@@ -2,6 +2,8 @@ defaults: &defaults
   fsq:
     client_id: <%= ENV['FSQ_KEY'] %>
     client_secret: <%= ENV['FSQ_SECRET'] %>
+  gmaps:
+    api_key: <%= ENV['GMA_KEY'] %>
 
 development:
   <<: *defaults

@@ -16,10 +16,11 @@
 
 <body>
   <h1><span class="cursive">Smoke-free</span> <span>bars in Zagreb</span></h1>
+  <div id="map_canvas"></div>
 
   <nav>
     <ol>
-      <!-- <li><%= link_to 'Home', root_path %></li> -->
+      <li><%= link_to 'Home', root_path %></li>
       <% if logged_in? %>
         <li><%= link_to "Edit profile", edit_current_user_path %></li>
         <li><%= link_to "Log out", logout_path %></li>
@@ -55,6 +56,7 @@
     })();
   </script>
 
+  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=#{Rails.application.config.gmaps.api_key}&sensor=false" %>
   <%= javascript_include_tag "application" %>
 </body>
 </html>
