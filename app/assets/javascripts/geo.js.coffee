@@ -7,9 +7,9 @@ $ ->
   map = new google.maps.Map document.getElementById('map_canvas'), myOptions
 
   $.get '/?format=json', (bars) ->
-    mapBar(bar) for bar in bars
+    markOnMap(bar) for bar in bars
 
-  mapBar = (bar) ->
+  markOnMap = (bar) ->
     latlng = new google.maps.LatLng bar.lat, bar.lng
 
     marker = new google.maps.Marker {
