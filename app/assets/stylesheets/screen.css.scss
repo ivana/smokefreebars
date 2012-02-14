@@ -3,6 +3,12 @@ html, body { height: 100% }
 #map_canvas { width:100%; height:300px; margin-bottom:20px; }
 .bubble h2 { margin: 0 }
 .bubble p { margin:5px 0 0 }
+#locate {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration:underline;
+}
 
 $text-color:#555;
 $background-color:snow;
