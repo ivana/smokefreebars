@@ -51,9 +51,9 @@ section { clear:left; width: 200px; margin: 0 auto; }
 #bars { background:#F9F7F7; padding:24px 30px 15px; border-radius:4px;
 
   li { margin-bottom:10px }
-  .name {
+  .name { color:inherit;
     margin:0 4px 0 0; display: inline-block;
-    font-size: 15px; font-weight: 200; line-height: 1.2; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
+    font-size: 15px; font-weight: 200; line-height: 1.3; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
   }
   .address {
     color: lighten(#369, 20%); text-shadow: 1px 1px 1px #E5E5E5;
@@ -81,7 +81,7 @@ footer {
   #bars {
     .name { font-size:20px; }
     .address { font-size:9px; }
-    + p { padding-left:30px; margin-top:20px; }
+    + p { margin-top:20px; }
   }
   footer { font-size:10px; margin-top:40px; }
 }

@@ -41,8 +41,11 @@ $ ->
     infowindow = new google.maps.InfoWindow {
       content: '<div class=bubble><h2>' + bar.name + '</h2><p>' + bar.address + '</p></div>'
     }
-    google.maps.event.addListener marker, 'click', ->
+    google.maps.event.addListener marker, 'click', -> # on marker click
       infowindow.open map, marker
+    google.maps.event.addDomListener document.getElementById('b_' + bar.id), 'click', -> # on list link click
+      infowindow.open map, marker
+      map.setCenter latlng
 
   # pin position (locate me)
   pin = (position) ->
