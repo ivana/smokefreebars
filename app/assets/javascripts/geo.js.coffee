@@ -1,7 +1,7 @@
 $ ->
   myOptions = {
-    center: new google.maps.LatLng(45.81005400765967, 15.971031188964844),
-    zoom: 13,
+    center: new google.maps.LatLng(45.800432, 15.979458),
+    zoom: 12,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   map = new google.maps.Map document.getElementById('map'), myOptions
