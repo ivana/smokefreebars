@@ -1,7 +1,7 @@
 <ul id="bars">
 <% @non_smoking_bars.each do |bar| %>
   <li>
-    <span class="name"><%= bar.name %></span>
+    <a href="#map" title="Show on the map" class="name"><%= bar.name %></a>
     <span class="address"><%= bar.address %></span>
     <%# if logged_in? %>
     <% if false %>
