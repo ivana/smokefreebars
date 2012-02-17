@@ -50,10 +50,11 @@ section { clear:left; width: 200px; margin: 0 auto; }
 
 #bars { background:#F9F7F7; padding:24px 30px 15px; border-radius:4px;
 
-  li { margin-bottom:10px }
-  .name { color:inherit;
-    margin:0 4px 0 0; display: inline-block;
-    font-size: 15px; font-weight: 200; line-height: 1.3; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
+  li { margin-bottom:5px }
+  .name, .address { display:inline-block; }
+  .name {
+    color:inherit; margin:0 4px 0 0;
+    font-size: 15px; line-height:24px; font-weight: 200; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
   }
   .address {
     color: lighten(#369, 20%); text-shadow: 1px 1px 1px #E5E5E5;
