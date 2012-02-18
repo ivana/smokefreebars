@@ -74,7 +74,6 @@ GEM
     multi_json (1.0.4)
     nibbler (1.3.0)
     nifty-generators (0.4.6)
-    pg (0.12.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -110,7 +109,6 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.5)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -140,10 +138,8 @@ DEPENDENCIES
   mongoid (~> 2.4)
   nibbler
   nifty-generators
-  pg
   rails (~> 3.2.0)
   sass-rails (~> 3.2.3)
-  sqlite3
   thin
   turn
   uglifier (>= 1.0.3)
