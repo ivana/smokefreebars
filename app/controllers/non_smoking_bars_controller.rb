@@ -1,7 +1,5 @@
 class NonSmokingBarsController < ApplicationController
 
-  before_filter :login_required, :except => [:index, :show]
-
   # GET /non_smoking_bars
   # GET /non_smoking_bars.json
   def index

@@ -22,11 +22,6 @@ gem 'jquery-rails'
 gem 'nibbler'
 gem 'choices'
 
-gem "nifty-generators", :group => :development
-
-# To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
