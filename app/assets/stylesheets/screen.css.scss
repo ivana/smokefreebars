@@ -55,6 +55,8 @@ section { clear:left; width: 200px; margin: 0 auto; }
   .name {
     color:inherit; margin:0 4px 0 0;
     font-size: 15px; line-height:24px; font-weight: 200; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
+
+    &:hover { text-decoration:underline; }
   }
   .address {
     color: lighten(#369, 20%); text-shadow: 1px 1px 1px #E5E5E5;
