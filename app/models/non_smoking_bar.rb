@@ -1,10 +1,19 @@
 class NonSmokingBar
   include Mongoid::Document
+  include Mongoid::Spacial::Document
 
+  # id is the same as the 4sq id
   field :name, type: String
   field :address, type: String
-  # id is the same as the 4sq id
+  field :coords, type: Array, spacial: true
 
-  validates_presence_of :name, :address
+  validates_presence_of :name, :coords
+
+  spacial_index :coords
 end
-# this model's purpose is to store edited values of 4sq properties, mainly corrections of wrong Croatian spellings
+
+# This model's purpose is:
+#
+#   1. to store attributes fetched from foursquare
+#   2. to enable mongodb spacial indexing for determining nearest
+#   3. to store after-save edited values of foursquare attributes, mainly corrections of wrong Croatian spellings

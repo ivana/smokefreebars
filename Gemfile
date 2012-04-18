@@ -5,8 +5,9 @@ gem 'rails', '~> 3.2.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem "mongoid", "~> 2.4"
-gem "bson_ext", "~> 1.5"
+gem 'mongoid', '~> 2.4'
+gem 'bson_ext', '~> 1.5'
+gem 'mongoid_spacial'
 
 gem 'thin'
 
@@ -35,4 +36,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-gem "mocha", :group => :test
+gem 'mocha', :group => :test
