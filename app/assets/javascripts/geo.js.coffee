@@ -72,4 +72,5 @@ $ ->
       animation: google.maps.Animation.DROP
     }
     map.setCenter pos
+    map.setZoom 15
 
