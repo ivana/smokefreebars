@@ -3,25 +3,12 @@
   <li>
     <%= link_to bar.name, '/#map', class: 'name', id: "b_#{bar.id}", title: 'Show on the map' %>
     <span class="address"><%= bar.address %></span>
-    <%# if logged_in? %>
-    <% if false %>
-      <ol>
-        <li><%= link_to 'Edit', edit_non_smoking_bar_path(bar) %></li>
-        <li><%= link_to 'Delete', bar, confirm: 'Are you sure?', method: :delete %></li>
-      </ol>
-    <% end %>
   </li>
 <% end %>
 </ul>
 
 <p>
-<%# if logged_in? %>
-<% if false %>
-  <%= link_to 'Add a smoke-free bar', new_non_smoking_bar_path %>
-<% else %>
   Know a place not listed here? Send an email to
   <a href="mailto:dev@ivana.im?subject=Smoke-free bars">dev@ivana.im</a> to let me know!
-<% end %>
 </p>
 
-<p id="notice"><%= notice %></p>
