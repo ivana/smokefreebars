@@ -2,12 +2,12 @@ class NonSmokingBar
   include Mongoid::Document
   include Mongoid::Spacial::Document
 
-  # id is the same as the 4sq id
   field :name, type: String
   field :address, type: String
-  field :coords, type: Array, spacial: true
+  field :coords, type: Array, spacial: true # longitude latitude array in that order - [lng, lat]
+  field :fsq_id, type: String # foursquare id != _id
 
-  validates_presence_of :name, :coords
+  validates_presence_of :name, :coords, :fsq_id
 
   spacial_index :coords
 end
