@@ -1,7 +1,7 @@
 <ul id="bars">
 <% @non_smoking_bars.each do |bar| %>
   <li>
-    <%= link_to bar.name, '/#map', class: 'name', id: "b_#{bar.id}", title: 'Show on the map' %>
+    <%= link_to bar.name, '/#map', class: 'name', id: "b_#{bar.fsq_id}", title: 'Show on the map' %>
     <span class="address"><%= bar.address %></span>
   </li>
 <% end %>
