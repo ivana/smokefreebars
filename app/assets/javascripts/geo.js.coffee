@@ -9,7 +9,7 @@ $ ->
   # AJAX #
 
   # map bars
-  $.get '/?format=json', (bars) ->
+  $.get '/bars', (bars) ->
     markOnMap(bar) for bar in bars
 
   # EVENTS #

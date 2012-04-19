@@ -19,6 +19,10 @@ class NonSmokingBarsController < ApplicationController
     end
   end
 
+  def list
+    render json: FsqBar.all
+  end
+
   # GET /non_smoking_bars/1
   # GET /non_smoking_bars/1.json
   def show
