@@ -16,6 +16,10 @@ class NonSmokingBarsController < ApplicationController
     render json: FsqBar.all
   end
 
+  def list_by_nearest
+    render json: NonSmokingBar.where(:coords.near => [params[:coords]]) # mongoid_spacial query
+  end
+
   # GET /non_smoking_bars/1
   # GET /non_smoking_bars/1.json
   def show

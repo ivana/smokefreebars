@@ -6,13 +6,9 @@ $ ->
   }
   map = new google.maps.Map document.getElementById('map'), myOptions
 
-  # AJAX #
-
   # map bars
   $.get '/bars', (bars) ->
     markOnMap(bar) for bar in bars
-
-  # EVENTS #
 
   # locate me
   $('#locate').on 'click', ->
@@ -20,8 +16,11 @@ $ ->
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition (position) ->
         pin position
+        $.get '/nearest', {coords: [position.coords.longitude, position.coords.latitude] }, (bars) ->
+          if bars and bars.length
+            reorder bars # replace existing html list with ordered by neareast
       , (error) -> # handle error
-        alert 'Error: The Geolocation service failed.'
+        # alert 'Error: The Geolocation service failed.'
         console.log error.message if console
     false
 
@@ -41,7 +40,7 @@ $ ->
     }
 
     infowindow = new google.maps.InfoWindow {
-      content: '<div class=bubble><h2>' + bar.name + '</h2><p>' + bar.address + '</p></div>'
+      content: "<div class=bubble><h2>#{bar.name}</h2><p>#{if bar.address then bar.address else ''}</p></div>"
     }
 
     google.maps.event.addListener marker, 'click', -> # on marker click
@@ -49,7 +48,7 @@ $ ->
       infowindow.open map, marker
       prevInfoWin = infowindow
 
-    google.maps.event.addDomListener document.getElementById('b_' + bar.id), 'click', -> # on list link click
+    $(document).on 'click', "#b_#{bar.id}", -> # on list link click
       prevInfoWin.close() if prevInfoWin
       infowindow.open map, marker
       map.setCenter latlng
@@ -64,7 +63,7 @@ $ ->
     pinShadow = new google.maps.MarkerImage "http://chart.apis.google.com/chart?chst=d_map_pin_shadow", new google.maps.Size(40, 37), new google.maps.Point(0, 0), new google.maps.Point(12, 35)
 
     marker = new google.maps.Marker {
-      title: 'Your are here',
+      title: 'You are here',
       map: map,
       position: pos,
       icon: pinImage,
@@ -73,4 +72,14 @@ $ ->
     }
     map.setCenter pos
     map.setZoom 15
+
+  # some DOM manipulation to replace existing html list with ordered by neareast
+  reorder = (bars) ->
+    $('#bars').empty()
+    append(bar) for bar in bars
+
+  append = (bar) ->
+    a = "<a href='/#map' class='name' id='b_#{bar.fsq_id}' title='Show on the map'>#{bar.name}</a>"
+    addr = if bar.address then "<span class='address'>#{bar.address}</span>" else ""
+    $('#bars').append "<li>#{a}#{addr}</li>"
 

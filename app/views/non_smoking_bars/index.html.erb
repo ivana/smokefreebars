@@ -1,11 +1,13 @@
-<ul id="bars">
+<ol id="bars">
 <% @non_smoking_bars.each do |bar| %>
   <li>
     <%= link_to bar.name, '/#map', class: 'name', id: "b_#{bar.fsq_id}", title: 'Show on the map' %>
-    <span class="address"><%= bar.address %></span>
+    <% unless bar.address.nil? or bar.address.empty? %>
+      <span class="address"><%= bar.address %></span>
+    <% end %>
   </li>
 <% end %>
-</ul>
+</ol>
 
 <p>
   Know a place not listed here? Send an email to
