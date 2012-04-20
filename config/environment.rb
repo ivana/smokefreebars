@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-NonSmokingBars::Application.initialize!
+SmokeFreeBars::Application.initialize!

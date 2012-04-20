@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NonSmokingBarTest < ActiveSupport::TestCase
+class SmokeFreeBarTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

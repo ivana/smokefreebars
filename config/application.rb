@@ -14,7 +14,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module NonSmokingBars
+module SmokeFreeBars
   class Application < Rails::Application
     config.autoload_paths << "#{config.root}/lib"    
     # Settings in config/environments/* take precedence over those specified here.

@@ -1,5 +1,5 @@
 <ol id="bars">
-<% @non_smoking_bars.each do |bar| %>
+<% @smoke_free_bars.each do |bar| %>
   <li>
     <%= link_to bar.name, '/#map', class: 'name', id: "b_#{bar.fsq_id}", title: 'Show on the map' %>
     <% unless bar.address.nil? or bar.address.empty? %>

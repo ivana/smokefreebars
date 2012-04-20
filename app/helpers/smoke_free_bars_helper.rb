@@ -1,0 +1,2 @@
+module SmokeFreeBarsHelper
+end

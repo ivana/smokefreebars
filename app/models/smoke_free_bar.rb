@@ -1,4 +1,4 @@
-class NonSmokingBar
+class SmokeFreeBar
   include Mongoid::Document
   include Mongoid::Spacial::Document
 

@@ -1,8 +1,8 @@
-NonSmokingBars::Application.routes.draw do
+SmokeFreeBars::Application.routes.draw do
 
-  resources :non_smoking_bars
-  match 'bars' => 'non_smoking_bars#list', :via => 'get'
-  match 'nearest' => 'non_smoking_bars#list_by_nearest', :via => 'get'
+  resources :smoke_free_bars
+  match 'bars' => 'smoke_free_bars#list', :via => 'get'
+  match 'nearest' => 'smoke_free_bars#list_by_nearest', :via => 'get'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -53,7 +53,7 @@ NonSmokingBars::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'non_smoking_bars#index'
+  root :to => 'smoke_free_bars#index'
 
   # See how all your routes lay out with "rake routes"
 

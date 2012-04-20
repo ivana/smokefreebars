@@ -1,10 +1,10 @@
 development:
   host: localhost
-  database: non_smoking_bars_development
+  database: smoke_free_bars_development
 
 test:
   host: localhost
-  database: non_smoking_bars_test
+  database: smoke_free_bars_test
 
 production:
   uri: <%= ENV['MONGOHQ_URL'] %>
