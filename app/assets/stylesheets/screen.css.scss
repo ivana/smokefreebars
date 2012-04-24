@@ -17,7 +17,7 @@ $border-color:#888;
 $link-color:darken(#8FBC8F, 10%); /* darkSeaGreen */
 $hover-color:darken(#3CB371, 10%); /* mediumSeaGreen */
 
-ol, ul { list-style-type:none; margin:0; padding:0; }
+ol, ul { margin:0; padding:0; }
 
 a { text-decoration:none;
   &:link, &:visited { color:$link-color; }
