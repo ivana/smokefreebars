@@ -1,7 +1,6 @@
 require 'open-uri'
 require 'json'
 require 'nibbler/json'
-# require 'active_support/core_ext'
 
 class FsqBar < NibblerJSON
   element :id
