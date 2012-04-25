@@ -1,1 +1,6 @@
-List of smoke-free bars in Zagreb
+# List of smoke-free bars in Zagreb
+
+Location
+  - pulled from Foursquare: `FsqBar`
+  - edited, reviewed data saved in `SavedLocation`
+  - needed? FsqBar -> CachedLocation syncing layer

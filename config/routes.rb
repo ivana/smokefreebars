@@ -1,9 +1,5 @@
 SmokeFreeBars::Application.routes.draw do
 
-  resources :smoke_free_bars
-  match 'bars' => 'smoke_free_bars#list', :via => 'get'
-  match 'nearest' => 'smoke_free_bars#list_by_nearest', :via => 'get'
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,6 +7,7 @@ $ ->
   map = new google.maps.Map document.getElementById('map'), myOptions
 
   # map bars
+  # FIXME: this resource is gone
   $.get '/bars', (bars) ->
     markOnMap(bar) for bar in bars
 
@@ -16,6 +17,7 @@ $ ->
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition (position) ->
         pin position
+        # FIXME: this resource is gone
         $.get '/nearest', {coords: [position.coords.longitude, position.coords.latitude] }, (bars) ->
           if bars and bars.length
             reorder bars # replace existing html list with ordered by neareast
