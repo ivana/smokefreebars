@@ -20,18 +20,6 @@ class SmokeFreeBarsController < ApplicationController
     render json: SmokeFreeBar.where(:coords.near => [params[:coords]]) # mongoid_spacial query
   end
 
-  # GET /smoke_free_bars/1
-  # GET /smoke_free_bars/1.json
-  def show
-    @smoke_free_bar = SmokeFreeBar.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @smoke_free_bar }
-    end
-  end
-
-
   private
 
   # synchronizes bars data in mongodb with the foursquare list
