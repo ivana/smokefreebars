@@ -24,11 +24,5 @@ class SavedLocation
   def self.delete_foursquare_ids ids
     where(:fsq_id.in => ids).delete_all
   end
-  
-  def self.each_missing_foursquare_location fsq_locations
-    existing_ids = existing_foursquare_ids
-    fsq_locations.each do |location|
-      yield location
-    end
-  end
+
 end
