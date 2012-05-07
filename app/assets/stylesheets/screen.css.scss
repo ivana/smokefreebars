@@ -33,14 +33,6 @@ body {
   } } }
 }
 
-nav {
-  font-size: 11px;
-  position: absolute; left: 20px; top: 13px;
-
-  ol { list-style-type:square; }
-}
-
-section { clear:left; width: 200px; margin: 0 auto; }
 #locate { text-align:center; }
 
 #bars { background:#F9F7F7; padding:24px 30px 15px; border-radius:4px;
@@ -68,13 +60,7 @@ footer {
   border-radius:2px;
 }
 
-#notice {
-  color:steelblue;
-  position: absolute; top: 123px; left: 20px;
-}
-
 @media only screen and (max-device-width:480px) {
-  nav { display:none }
   body > h1 .cursive + span { padding-top:6px; font-size:26px; line-height:1.2; letter-spacing:1px; }
   #bars {
     .name { font-size:20px; }
@@ -83,22 +69,3 @@ footer {
   }
   footer { font-size:10px; margin-top:40px; }
 }
-
-/* scaffold css */
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px; } }
-
-.field_with_errors { background-color: red; display: table; }
-
-#error_explanation {
-  border: 1px solid red; background-color: #f0f0f0;
-  padding: 7px; padding-bottom: 0; margin-bottom: 20px;
-
-  h2 {
-    text-align: left; font-size:12px;
-    padding:7px; margin: -7px; margin-bottom: 0px;
-    background-color: #c00; color: #fff; }
-}
-
