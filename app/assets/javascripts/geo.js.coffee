@@ -11,7 +11,7 @@ $ ->
     markOnMap(bar) for bar in bars
 
   # locate me
-  $('#locate').on 'click', ->
+  $('#locate a').on 'click', ->
     # try html5 geolocation
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition (position) ->
