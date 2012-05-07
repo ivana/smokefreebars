@@ -12,6 +12,7 @@ $link-color:darken(#8FBC8F, 10%); /* darkSeaGreen */
 $hover-color:darken(#3CB371, 10%); /* mediumSeaGreen */
 
 ol, ul { margin:0; padding:0; }
+ul { list-style-type: none; }
 
 a { text-decoration:none;
   &:link, &:visited { color:$link-color; }
@@ -35,19 +36,19 @@ body {
 
 #locate { text-align:center; }
 
-#bars { background:#F9F7F7; padding:24px 30px 15px; border-radius:4px;
+#bars { background:#F9F7F7; padding:12px 12px 12px 36px; border-radius:4px;
 
   li { margin-bottom:5px }
-  .name, .address { display:inline-block; }
   .name {
-    color:inherit; margin:0 4px 0 0;
-    font-size: 15px; line-height:24px; font-weight: 200; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
+    margin:0 4px 0 0;
+    color:inherit;
+    font-size: 15px; font-weight: 200; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
 
     &:hover { text-decoration:underline; }
   }
   .address {
-    color: lighten(#369, 20%); text-shadow: 1px 1px 1px #E5E5E5;
-    text-transform: uppercase; font-size: 11px;
+    color: lighten(#369, 20%);
+    text-shadow: 1px 1px 1px #E5E5E5; text-transform: uppercase; font-size: 11px;
   }
 
   + p { margin-top:40px; }
@@ -62,9 +63,9 @@ footer {
 
 @media only screen and (max-device-width:480px) {
   body > h1 .cursive + span { padding-top:6px; font-size:26px; line-height:1.2; letter-spacing:1px; }
-  #bars {
+  #bars { font-size:16px;
     .name { font-size:20px; }
-    .address { font-size:9px; }
+    .address { font-size:10px; }
     + p { margin-top:20px; }
   }
   footer { font-size:10px; margin-top:40px; }
