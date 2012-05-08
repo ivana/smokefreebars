@@ -31,4 +31,9 @@ module Location
   def self.perform_sync?
     !defined? @last_synced_at or @last_synced_at < SYNC_INTERVAL.ago
   end
+
+  def self.reset!
+    remove_instance_variable '@last_synced_at' if defined? @last_synced_at
+    SavedLocation.delete_all
+  end
 end
