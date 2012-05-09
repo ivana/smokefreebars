@@ -48,7 +48,7 @@ $ ->
       infowindow.open map, marker
       prevInfoWin = infowindow
 
-    $(document).on 'click', "#b_#{bar.id}", -> # on list link click
+    $(document).on 'click', "#b_#{bar.fsq_id}", -> # on list link click
       prevInfoWin.close() if prevInfoWin
       infowindow.open map, marker
       map.setCenter latlng
