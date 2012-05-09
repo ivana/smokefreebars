@@ -52,6 +52,7 @@ $ ->
       prevInfoWin.close() if prevInfoWin
       infowindow.open map, marker
       map.setCenter latlng
+      map.setZoom 15
       prevInfoWin = infowindow
 
   # pin position (locate me)
