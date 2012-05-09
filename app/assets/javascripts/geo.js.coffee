@@ -7,8 +7,7 @@ $ ->
   map = new google.maps.Map document.getElementById('map'), myOptions
 
   # map bars
-  # FIXME: this resource is gone
-  $.get '/bars', (bars) ->
+  $.get '/?format=json', (bars) ->
     markOnMap(bar) for bar in bars
 
   # locate me
@@ -17,8 +16,7 @@ $ ->
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition (position) ->
         pin position
-        # FIXME: this resource is gone
-        $.get '/nearest', {coords: [position.coords.longitude, position.coords.latitude] }, (bars) ->
+        $.get '/?format=json', {coords: [position.coords.longitude, position.coords.latitude] }, (bars) ->
           if bars and bars.length
             reorder bars # replace existing html list with ordered by neareast
       , (error) -> # handle error
@@ -32,7 +30,7 @@ $ ->
 
   # pin a bar on map (map bars)
   markOnMap = (bar) ->
-    latlng = new google.maps.LatLng bar.lat, bar.lng
+    latlng = new google.maps.LatLng bar.coords.lat, bar.coords.lng
 
     marker = new google.maps.Marker {
       title: bar.name,
