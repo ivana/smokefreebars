@@ -42,29 +42,39 @@ describe Location do
   end
 
   it "backs up locations to database" do
-    fake_location = OpenStruct.new id: 'abcd1234', name: 'New Venue', address: 'Fake St. 62', lat: 42, lng: 16
-    fake_foursquare = OpenStruct.new all: [fake_location]
+    old_location_saved = SavedLocation.create! fsq_id: 'abcd1235', name: 'Old Venue', address: 'Fake St. 61', coords: { lat: 43, lng: 16 }
+
+    locations = SavedLocation.all
+    locations.size.should eq(1)
+    locations.should include(old_location_saved)
+
+    old_location = OpenStruct.new id: 'abcd1235', name: 'Old Venue', address: 'Fake St. 61', lat: 43, lng: 16
+    new_location = OpenStruct.new id: 'abcd1234', name: 'New Venue', address: 'Fake St. 62', lat: 42, lng: 16
+    fake_foursquare = OpenStruct.new all: [old_location, new_location]
     Location.foursquare_model = fake_foursquare
 
     Location.all
 
     locations = SavedLocation.all
-    locations.size.should eq(1)
-    locations.first.fsq_id.should eq('abcd1234')
-    locations.first.coords.should include(lat: 42, lng: 16)
+    locations.size.should eq(2)
+    locations.map(&:fsq_id).should include(old_location.id, new_location.id)
   end
 
   it "deletes old locations from database" do
-    stale_location = SavedLocation.create! fsq_id: 'abcd7890', name: 'Smoking allowed', coords: { lat: 42, lng: 16 }
-    SavedLocation.all.size.should eq(1)
-
-    fake_foursquare = OpenStruct.new all: []
+    smokefree = OpenStruct.new id: 'abcd1235', name: 'Smoke-free bar', lat: 43, lng: 16
+    fake_foursquare = OpenStruct.new all: [smokefree]
     Location.foursquare_model = fake_foursquare
 
-    Location.all
-    SavedLocation.all.size.should eq(0)
-  end
+    stale_location = SavedLocation.create! fsq_id: 'abcd7890', name: 'Smoking allowed', coords: { lat: 42, lng: 16 }
+    smokefree_saved = SavedLocation.create! fsq_id: 'abcd1235', name: 'Smoke-free bar', coords: { lat: 43, lng: 16 }
+    SavedLocation.all.size.should eq(2)
 
-  it "fetches by coordinates"
+    Location.all
+
+    locations = SavedLocation.all
+    locations.size.should eq(1)
+    locations.should include(smokefree_saved)
+    locations.should_not include(stale_location)
+  end
 
 end
