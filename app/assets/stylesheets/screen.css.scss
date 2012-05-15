@@ -65,7 +65,8 @@ footer {
   .bars { font-size:16px;
     + p { margin-top:20px; }
   }
-  a.name { font-size:20px; }
+  a.name { font-size:20px; margin-right:8px; }
   .address { font-size:10px; }
+  .bubble dd { font-size:12px; }
   footer { font-size:10px; margin-top:40px; }
 }
