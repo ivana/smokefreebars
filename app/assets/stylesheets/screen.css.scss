@@ -1,8 +1,10 @@
 /* map */
 html, body { height: 100% }
 .map { width:100%; height:300px; margin-bottom:20px; }
-.bubble h2 { margin: 0 }
-.bubble p { margin:5px 0 0 }
+.bubble { margin: 0;
+  dt { font-size:20px; }
+  dd { margin:5px 0 0; }
+}
 
 $text-color:#555;
 $background-color:snow;

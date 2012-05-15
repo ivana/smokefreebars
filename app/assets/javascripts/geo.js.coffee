@@ -40,7 +40,7 @@ $ ->
     }
 
     infowindow = new google.maps.InfoWindow {
-      content: "<div class=bubble><h2>#{bar.name}</h2><p>#{if bar.address then bar.address else ''}</p></div>"
+      content: "<dl class=bubble><dt>#{bar.name}</dt><dd class=address>#{if bar.address then bar.address else ''}</dd></dl>"
     }
 
     google.maps.event.addListener marker, 'click', -> # on marker click
