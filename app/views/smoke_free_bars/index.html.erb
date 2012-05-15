@@ -1,4 +1,4 @@
-<ol id="bars">
+<ol id="bars" class="bars">
 <% @smoke_free_bars.each do |bar| %>
   <li>
     <%= link_to bar.name, '/#map', class: 'name', id: "b_#{bar.fsq_id}", title: 'Show on the map' %>
