@@ -6,6 +6,7 @@ SmokeFreeBars::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match '/:locale' => 'smoke_free_bars#index', :locale => Regexp.new(I18n.available_locales.join('|'))
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

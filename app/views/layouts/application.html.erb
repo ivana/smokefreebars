@@ -19,7 +19,14 @@
 
   <div id="map" class="map"></div>
 
-  <p class="locate"><a href="#"><%= t :locate %></a></p>
+  <nav class="lang"><ol>
+    <% I18n.available_locales.each do |locale| %>
+      <li><%= link_to locale, "/#{locale}" %></li>
+    <% end %><ol>
+  </nav>
+  <p class="locate">
+    <a href="#"><%= image_tag "pin.png" %><%= t :locate %></a>
+  </p>
 
   <%= yield %>
 

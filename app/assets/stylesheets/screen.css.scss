@@ -28,13 +28,28 @@ body {
 }
 
 h1 {
-  margin: 10px 0 20px;
-  font-weight:normal; font-family:"Great Vibes", cursive; font-size:52px;
+  margin:10px 0 20px;
+  font: normal 52px/1.5 "Great Vibes", cursive;
   text-shadow: 1px 1px 1px #CCC;
   color:#3CB371;
 }
 
-.locate { text-align:center; }
+.lang {
+  float:right;
+  text-transform:uppercase; font-weight:bold;
+
+  li { display:inline;
+    &:before { content: ' - ' }
+    &:first-child:before { content: '' }
+  }
+  a { color:inherit;
+    &:hover { color:#656565; }
+  }
+}
+.locate {
+  img { width:15px; vertical-align:text-bottom; padding-right: 5px; }
+  a { text-shadow: 1px 1px 1px #E5E5E5; }
+}
 
 .bars { background:#F9F7F7; padding:12px 12px 12px 36px; border-radius:4px;
 
@@ -45,28 +60,34 @@ h1 {
 a.name {
   margin:0 4px 0 0;
   color:$text-color;
-  font-size: 15px; font-weight: 200; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
+  font-size:15px; font-weight: 200; letter-spacing: 1px; text-shadow: 1px 1px 1px #BBB;
 
   &:hover { text-decoration:underline; }
 }
 .address {
   color: lighten(#369, 20%);
-  text-shadow: 1px 1px 1px #E5E5E5; text-transform: uppercase; font-size: 11px;
+  text-shadow: 1px 1px 1px #E5E5E5; text-transform: uppercase;
 }
 
 footer {
   background:$text-color; color: #909090;
-  font-size: 11px; text-shadow: 1px 1px 1px #222; text-align:center;
+  text-shadow: 1px 1px 1px #222; text-align:center;
   padding: 25px 10px 20px; margin-top:100px;
   border-radius:2px;
 }
+
+.address, footer { font-size:11px; }
 
 @media only screen and (max-device-width:480px) {
   .bars { font-size:16px;
     + p { margin-top:20px; }
   }
   a.name { font-size:20px; margin-right:8px; }
-  .address { font-size:10px; }
   .bubble dd { font-size:12px; }
-  footer { font-size:10px; margin-top:40px; }
+
+  .locate img { display:none; }
+  .lang { margin-top:5px; font-size:13px; }
+  footer { margin-top:40px; }
+
+  .address, .locate, footer { font-size:10px; }
 }
