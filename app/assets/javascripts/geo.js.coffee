@@ -80,7 +80,7 @@ $ ->
     append(bar) for bar in bars
 
   append = (bar) ->
-    a = "<a href='/#map' class='name' id='b_#{bar.fsq_id}' title='Show on the map'>#{bar.name}</a>"
+    a = "<a href='#map' class='name' id='b_#{bar.fsq_id}' title='Show on the map'>#{bar.name}</a>"
     addr = if bar.address then "<span class='address'>#{bar.address}</span>" else ""
     $('#bars').append "<li>#{a}#{addr}</li>"
 
