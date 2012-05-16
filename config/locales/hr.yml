@@ -1,0 +1,14 @@
+# Croatian / hrvatski
+
+hr:
+  smoke_free_bars:
+    index:
+      email_me: Znaš još neka mjesta koja nisu na popisu? Pošalji mi e-mail na <a href="mailto:dev@ivana.im?subject=Nepušački kafići">dev@ivana.im</a>!
+  title: "Nepušački kafići u Zagrebu"
+  desc: "Nepušački kafići, barovi i klubovi u Zagrebu, označeni na karti, uz geolociranje."
+  locate: "Pokaži me na karti & izlistaj mjesta prema najbližem"
+  developed_by: "Razvila"
+  on_twitter: "na Twitteru"
+  contributions: "Doprinijeli ostali neljubitelji pušačkog dima."
+  opensourced: "Kôd dostupan"
+  on_github: "na GitHubu"
