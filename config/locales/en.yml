@@ -2,4 +2,14 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  smoke_free_bars:
+    index:
+      email_me: Know a place not listed here? Send an email to <a href="mailto:dev@ivana.im?subject=Smoke-free bars">dev@ivana.im</a> to let me know!
+  title: "Smoke-free bars in Zagreb"
+  desc: "Smoke-free bars, cafés, and clubs in Zagreb. With map and geolocation."
+  locate: "Locate me on the map & list places by nearest"
+  developed_by: "Developed by"
+  on_twitter: "on Twitter"
+  contributions: "Contributions by friends = other cigarette smoke haters."
+  opensourced: "Open-sourced"
+  on_github: "on GitHub"
