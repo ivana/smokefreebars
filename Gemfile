@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '2.1.3'
+
 gem 'rails', '~> 3.2.0'
 
 # Bundle edge Rails instead:
@@ -9,7 +11,7 @@ gem 'mongoid', '~> 2.4'
 gem 'bson_ext', '~> 1.5'
 gem 'mongoid_spacial'
 
-gem 'thin'
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,9 +24,6 @@ end
 gem 'jquery-rails'
 gem 'nibbler'
 gem 'choices'
-
-# Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
